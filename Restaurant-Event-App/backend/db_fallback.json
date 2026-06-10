@@ -1,0 +1,164 @@
+{
+  "users": [
+    {
+      "_id": "user_1781072473940",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "password": "$2b$10$WxlwvM1iajNrwCqwSmpTce9FrJeKQkXhpVJ9MWI1zw1yN11kTGgSu",
+      "role": "customer",
+      "createdAt": "2026-06-10T06:21:13.940Z",
+      "updatedAt": "2026-06-10T06:21:13.940Z"
+    },
+    {
+      "_id": "user_1781072870064",
+      "name": "surya",
+      "email": "surayaluwala55@gmail.com",
+      "password": "$2b$10$H1oRS7nbNMmmt.E1P8Y.J.4SJ8VNYsMbRNaa8Wvo/Uu3kH7ImNZ.q",
+      "role": "customer",
+      "createdAt": "2026-06-10T06:27:50.064Z",
+      "updatedAt": "2026-06-10T06:27:50.064Z"
+    },
+    {
+      "_id": "user_1781073136615",
+      "name": "Test",
+      "email": "test@example.com",
+      "password": "$2b$10$f8mXcM3hzavM8sSGtZ9WBef8MXDn5wwc.my0t67qUlhXy7r74K8wy",
+      "role": "customer",
+      "createdAt": "2026-06-10T06:32:16.615Z",
+      "updatedAt": "2026-06-10T06:32:16.615Z"
+    },
+    {
+      "_id": "user_1781073746283",
+      "name": "SuryA",
+      "email": "suryaaluwala55@gmail.com",
+      "password": "$2b$10$/UZTWgsJ.Q2w5pabApA3Bufr83emfBLHyXFzqu/OZ5g5wHUxBCwMS",
+      "role": "customer",
+      "createdAt": "2026-06-10T06:42:26.283Z",
+      "updatedAt": "2026-06-10T11:40:17.783Z",
+      "addresses": [],
+      "walletBalance": 1259,
+      "loyaltyPoints": 164
+    },
+    {
+      "_id": "user_1781083104032",
+      "name": "Test User",
+      "email": "testrandom456@gmail.com",
+      "password": "$2b$10$BGXdQhIPCCYTNlEfPxu/UeuM5YgXIJok5CSKqXLciClkBGbR/v/ia",
+      "role": "customer",
+      "phone": "",
+      "dob": "",
+      "dietaryPreferences": [],
+      "addresses": [],
+      "loyaltyPoints": 120,
+      "walletBalance": 1000,
+      "createdAt": "2026-06-10T09:18:24.032Z",
+      "updatedAt": "2026-06-10T09:18:24.032Z"
+    }
+  ],
+  "restaurants": [
+    {
+      "_id": "resto_1781082244392",
+      "name": "The Grand Epitome",
+      "location": "Jubilee Hills, Hyderabad",
+      "description": "Fine dining luxury. Multi-cuisine gourmet culinary delights with visual themes.",
+      "activities": [
+        "Regular Dining",
+        "Event Planning",
+        "Stealth Mode"
+      ],
+      "themes": [
+        "Modern Luxury",
+        "Royal Banquet",
+        "Glassmorphic Lounge"
+      ],
+      "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&auto=format&fit=crop&q=60",
+      "createdAt": "2026-06-10T09:04:04.392Z",
+      "updatedAt": "2026-06-10T09:04:04.392Z"
+    },
+    {
+      "_id": "resto_1781082244393",
+      "name": "Terrace Fusion",
+      "location": "Gachibowli, Hyderabad",
+      "description": "Scenic terrace outdoor lounge offering oriental appetizers and sunset mocktails.",
+      "activities": [
+        "Regular Dining",
+        "Stealth Mode"
+      ],
+      "themes": [
+        "Sunset Skyline",
+        "Tropical Garden"
+      ],
+      "image": "https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?w=600&auto=format&fit=crop&q=60",
+      "createdAt": "2026-06-10T09:04:04.393Z",
+      "updatedAt": "2026-06-10T09:04:04.393Z"
+    },
+    {
+      "_id": "resto_1781082244394",
+      "name": "La Bella Italia",
+      "location": "Banjara Hills, Hyderabad",
+      "description": "Charming local Trattoria serving authentic Neapolitan wood-fired pizzas and homemade pasta.",
+      "activities": [
+        "Regular Dining",
+        "Event Planning"
+      ],
+      "themes": [
+        "Rustic Tuscan",
+        "Venetian Romance"
+      ],
+      "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&auto=format&fit=crop&q=60",
+      "createdAt": "2026-06-10T09:04:04.394Z",
+      "updatedAt": "2026-06-10T09:04:04.394Z"
+    },
+    {
+      "_id": "resto_1781082244395",
+      "name": "Sakura Zen",
+      "location": "Hitech City, Hyderabad",
+      "description": "Intimate Japanese sushi bar and private rooms designed for high-privacy VIP dining.",
+      "activities": [
+        "Regular Dining",
+        "Stealth Mode"
+      ],
+      "themes": [
+        "Traditional Tatami",
+        "Neon Cyberpunk"
+      ],
+      "image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=600&auto=format&fit=crop&q=60",
+      "createdAt": "2026-06-10T09:04:04.395Z",
+      "updatedAt": "2026-06-10T09:04:04.395Z"
+    }
+  ],
+  "bookings": [],
+  "orders": [
+    {
+      "_id": "order_1781091617774",
+      "userId": "user_1781073746283",
+      "restaurantId": "resto_1781082244392",
+      "restaurantName": "The Grand Epitome",
+      "items": [
+        {
+          "id": "chef_special_steak",
+          "name": "Gourmet Ribeye Steak",
+          "price": 420,
+          "category": "Main Course",
+          "quantity": 1,
+          "restaurantId": "resto_1781082244392"
+        }
+      ],
+      "subtotal": 420,
+      "discount": 0,
+      "tax": 21,
+      "total": 441,
+      "paymentMethod": "Wallet",
+      "paymentStatus": "Paid",
+      "status": "Delivered",
+      "deliveryDetails": {
+        "name": "Rohan Sharma",
+        "phone": "+91 98765 43210",
+        "address": "123 Luxury Suites, Jubilee Hills, Hyderabad",
+        "estimatedTime": "30-45 mins"
+      },
+      "createdAt": "2026-06-10T11:40:17.774Z",
+      "updatedAt": "2026-06-10T11:41:17.854Z"
+    }
+  ]
+}
