@@ -58,7 +58,7 @@
   "restaurants": [
     {
       "_id": "resto_1781082244392",
-      "name": "The Grand Epitome",
+      "name": "The Grand Occasia",
       "location": "Jubilee Hills, Hyderabad",
       "description": "Fine dining luxury. Multi-cuisine gourmet culinary delights with visual themes.",
       "activities": [
@@ -133,7 +133,7 @@
       "_id": "order_1781091617774",
       "userId": "user_1781073746283",
       "restaurantId": "resto_1781082244392",
-      "restaurantName": "The Grand Epitome",
+      "restaurantName": "The Grand Occasia",
       "items": [
         {
           "id": "chef_special_steak",

@@ -52,7 +52,7 @@ const MENU_ITEMS = [
 const PROMO_CODES = [
   { code: "WELCOME50", discount: 50, minSpend: 200, desc: "Get flat ₹50 off on orders above ₹200" },
   { code: "SPECIAL30", discount: 100, minSpend: 300, desc: "Gourmet Daily Deal: Save flat ₹100 on orders above ₹300" },
-  { code: "EPITOME100", discount: 100, minSpend: 500, desc: "Grand Saving: Flat ₹100 off on order above ₹500" }
+  { code: "OCCASIA100", discount: 100, minSpend: 500, desc: "Grand Saving: Flat ₹100 off on order above ₹500" }
 ];
 
 function Dashboard() {
@@ -102,7 +102,7 @@ function Dashboard() {
 
   // Notifications State
   const [notifications, setNotifications] = useState([
-    { id: 1, type: "system", text: "Welcome to EPITOME DineVerse! Explore our 4 premium themed restaurants.", time: "Just now", read: false },
+    { id: 1, type: "system", text: "Welcome to OCCASIA DineVerse! Explore our 4 premium themed restaurants.", time: "Just now", read: false },
     { id: 2, type: "coupon", text: "New Promo Code alert: Use 'WELCOME50' to get flat ₹50 off on your first order!", time: "1 hour ago", read: false }
   ]);
 
@@ -119,7 +119,7 @@ function Dashboard() {
   const [tickets, setTickets] = useState([]);
   const [newTicket, setNewTicket] = useState({ orderId: "", category: "Late Delivery", text: "" });
   const [supportChat, setSupportChat] = useState([
-    { sender: "agent", text: "Hello! Thank you for contacting Epitome Customer Support. How can I help you today?", time: "14:27" }
+    { sender: "agent", text: "Hello! Thank you for contacting Occasia Customer Support. How can I help you today?", time: "14:27" }
   ]);
   const [chatInput, setChatInput] = useState("");
 
@@ -367,7 +367,7 @@ function Dashboard() {
     // Create Order
     const orderPayload = {
       restaurantId: selectedResto?._id || "resto_1",
-      restaurantName: selectedResto?.name || "The Grand Epitome",
+      restaurantName: selectedResto?.name || "The Grand Occasia",
       items: cart,
       subtotal: getSubtotal(),
       discount: getDiscount(),
@@ -682,7 +682,7 @@ function Dashboard() {
           <div className="d-flex align-items-center">
             <span className="fs-3 me-2" style={{ textShadow: "0 0 10px rgba(170, 59, 255, 0.4)" }}>✨</span>
             <span className="fw-bold fs-4 text-start sidebar-logo" style={{ background: "var(--gradient-accent)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-              EPITOME
+              OCCASIA
             </span>
           </div>
         </div>
@@ -1600,7 +1600,7 @@ function Dashboard() {
                     👑 GOLD
                   </div>
                   <div>
-                    <span className="text-white-50 d-block" style={{ fontSize: "0.8rem" }}>EPITOME CLUB MEMBER</span>
+                    <span className="text-white-50 d-block" style={{ fontSize: "0.8rem" }}>OCCASIA CLUB MEMBER</span>
                     <h3 className="fw-bold text-white fs-3 mb-4">{user?.name}</h3>
                     
                     <div className="mb-4">
@@ -1651,18 +1651,18 @@ function Dashboard() {
               <div className="col-12">
                 <div className="glass-card p-4">
                   <h4 className="fw-bold text-dark-emphasis mb-2" style={{ fontSize: "1.1rem" }}>🔗 Referral Program</h4>
-                  <p className="text-muted mb-3" style={{ fontSize: "0.85rem" }}>Invite your gourmet friends to Epitome! They get ₹100 starter wallet credit, and you earn 100 Loyalty Points when they make their first booking.</p>
+                  <p className="text-muted mb-3" style={{ fontSize: "0.85rem" }}>Invite your gourmet friends to Occasia! They get ₹100 starter wallet credit, and you earn 100 Loyalty Points when they make their first booking.</p>
                   
                   <div className="input-group" style={{ maxWidth: "500px" }}>
                     <input 
                       type="text" 
                       className="form-control form-control-custom border-end-0" 
-                      value={`https://dineverse.epitome.com/invite?ref=EPI_${user?._id?.slice(-5)}`}
+                      value={`https://dineverse.occasia.com/invite?ref=OCC_${user?._id?.slice(-5)}`}
                       readOnly 
                       style={{ borderTopRightRadius: "0", borderBottomRightRadius: "0" }}
                     />
                     <button className="btn btn-accent px-4" onClick={() => {
-                      navigator.clipboard.writeText(`https://dineverse.epitome.com/invite?ref=EPI_${user?._id?.slice(-5)}`);
+                      navigator.clipboard.writeText(`https://dineverse.occasia.com/invite?ref=OCC_${user?._id?.slice(-5)}`);
                       alert("Referral link copied to clipboard!");
                     }} style={{ borderTopLeftRadius: "0", borderBottomLeftRadius: "0" }}>
                       Copy Code
@@ -1715,7 +1715,7 @@ function Dashboard() {
               <div className="col-md-6">
                 <div className="card border-0 text-white p-4 h-100 d-flex flex-column justify-content-between shadow" style={{ borderRadius: "20px", background: "linear-gradient(135deg, #aa3bff 0%, #6366f1 100%)" }}>
                   <div>
-                    <span className="text-white-50 d-block" style={{ fontSize: "0.8rem" }}>EPITOME SECURE WALLET</span>
+                    <span className="text-white-50 d-block" style={{ fontSize: "0.8rem" }}>OCCASIA SECURE WALLET</span>
                     <h3 className="fw-bold text-white fs-1 mb-2 mt-1">₹{walletBalance}</h3>
                     <p className="text-white-50 mb-0" style={{ fontSize: "0.85rem" }}>Linked account: {user?.email}</p>
                   </div>
@@ -1953,7 +1953,7 @@ function Dashboard() {
                     {[
                       { id: "faq1", q: "How do I cancel my table reservation?", a: "Go to Bookings tab. Locate the active booking under Reservation History list, then click the Cancel icon next to it." },
                       { id: "faq2", q: "How long does refunds take?", a: "Wallet refunds process instantly. Credit or debit cards refunds take 3-5 business days to clear back to your banking institution." },
-                      { id: "faq3", q: "How are Loyalty Points calculated?", a: "You earn 1 point for every ₹10 spent on food checkouts, and 20 points for every table booking made on Epitome." },
+                      { id: "faq3", q: "How are Loyalty Points calculated?", a: "You earn 1 point for every ₹10 spent on food checkouts, and 20 points for every table booking made on Occasia." },
                       { id: "faq4", q: "What is Stealth Booking Mode?", a: "Stealth Booking offers high-privacy table layouts, VIP entrances, and confidential booking registries for high-profile client gatherings." }
                     ].map((faq, idx) => (
                       <div className="accordion-item border border-color bg-body-tertiary rounded-3 mb-2" key={faq.id}>

@@ -33,7 +33,7 @@ const seedDefaultRestaurants = async () => {
 
     const defaultRestaurants = [
       {
-        name: "The Grand Epitome",
+        name: "The Grand Occasia",
         location: "Jubilee Hills, Hyderabad",
         description: "Fine dining luxury. Multi-cuisine gourmet culinary delights with visual themes.",
         activities: ["Regular Dining", "Event Planning", "Stealth Mode"],
@@ -96,7 +96,7 @@ app.use("/api/orders", orderRoutes);
 
 // Home Route
 app.get("/", (req, res) => {
-  res.send("Epitome DineVerse API Running");
+  res.send("Occasia DineVerse API Running");
 });
 
 // Server
