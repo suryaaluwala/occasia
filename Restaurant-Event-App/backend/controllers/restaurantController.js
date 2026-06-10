@@ -14,7 +14,7 @@ exports.getRestaurants = async (req, res) => {
 
     res.json(restaurants);
   } catch (error) {
-    res.status(500).json(error);
+    res.status(500).json({ message: error.message || "Internal server error" });
   }
 };
 
@@ -27,6 +27,6 @@ exports.addRestaurant = async (req, res) => {
 
     res.status(201).json(restaurant);
   } catch (error) {
-    res.status(500).json(error);
+    res.status(500).json({ message: error.message || "Internal server error" });
   }
 };
