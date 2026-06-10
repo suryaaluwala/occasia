@@ -76,17 +76,22 @@ const seedDefaultRestaurants = async () => {
 };
 
 // MongoDB Connection
-mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => {
-    console.log("MongoDB Connected");
-    seedDefaultRestaurants();
-  })
-  .catch((err) => {
-    console.log("MongoDB Error:", err);
-    // Seed locally if Mongo connection fails
-    seedDefaultRestaurants();
-  });
+if (process.env.MONGO_URI) {
+  mongoose
+    .connect(process.env.MONGO_URI)
+    .then(() => {
+      console.log("MongoDB Connected");
+      seedDefaultRestaurants();
+    })
+    .catch((err) => {
+      console.log("MongoDB Error:", err);
+      // Seed locally if Mongo connection fails
+      seedDefaultRestaurants();
+    });
+} else {
+  console.log("No MONGO_URI environment variable set. Falling back to local database.");
+  seedDefaultRestaurants();
+}
 
 // Routes
 app.use("/api/auth", authRoutes);
