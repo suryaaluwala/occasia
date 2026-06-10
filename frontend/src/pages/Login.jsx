@@ -56,7 +56,9 @@ function Login() {
       console.error(err);
       setError(
         err.response?.data?.message ||
-          "Something went wrong. Please check your credentials or try again later."
+          (!err.response
+            ? "Could not connect to the backend server. Please check if the server is running or if the API base URL is correct."
+            : "Something went wrong. Please check your credentials or try again later.")
       );
     } finally {
       setLoading(false);

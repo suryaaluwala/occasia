@@ -69,7 +69,9 @@ function Register() {
       console.error(err);
       setError(
         err.response?.data?.message ||
-          "Registration failed. Email might already be in use."
+          (!err.response
+            ? "Could not connect to the backend server. Please check if the server is running or if the API base URL is correct."
+            : "Registration failed. Email might already be in use.")
       );
       setLoading(false);
     }
